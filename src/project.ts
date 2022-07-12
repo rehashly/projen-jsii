@@ -12,6 +12,7 @@ export class RehashlyJsiiProject extends cdk.JsiiProject {
     super({
       ...options,
       authorOrganization: true,
+      npmRegistryUrl: 'https://npm.pkg.github.com',
       packageManager: javascript.NodePackageManager.NPM,
       prettier: true,
       prettierOptions: {
@@ -22,7 +23,7 @@ export class RehashlyJsiiProject extends cdk.JsiiProject {
       },
     })
 
-    this.addDeps('projen@^0.58.13')
-    this.addPeerDeps('projen@^0.58.13')
+    this.addDeps('projen')
+    this.addPeerDeps('projen')
   }
 }

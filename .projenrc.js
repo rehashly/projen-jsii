@@ -5,8 +5,9 @@ const project = new cdk.JsiiProject({
   authorAddress: 'haitham@rehashly.com',
   authorOrganization: true,
   defaultReleaseBranch: 'main',
-  name: 'projen-jsii',
   description: "Rehashly's opinionated projen JSII project type.",
+  name: 'projen-jsii',
+  npmAccess: NpmAccess.PUBLIC,
   packageManager: javascript.NodePackageManager.NPM,
   packageName: '@rehashly/projen-jsii',
   repositoryUrl: 'https://github.com/rehashly/projen-jsii.git',
@@ -19,6 +20,5 @@ const project = new cdk.JsiiProject({
   },
   deps: ['projen'],
   peerDeps: ['projen'],
-  npmAccess: NpmAccess.PUBLIC,
 })
 project.synth()
