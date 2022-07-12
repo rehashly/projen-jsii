@@ -1,15 +1,24 @@
-const { cdk, javascript } = require('projen');
+const { cdk, javascript } = require('projen')
+const { NpmAccess } = require('projen/lib/javascript')
 const project = new cdk.JsiiProject({
   author: 'Haitham Gad',
   authorAddress: 'haitham@rehashly.com',
+  authorOrganization: true,
   defaultReleaseBranch: 'main',
   name: 'projen-jsii',
+  description: "Rehashly's opinionated projen JSII project type.",
   packageManager: javascript.NodePackageManager.NPM,
   packageName: '@rehashly/projen-jsii',
   repositoryUrl: 'https://github.com/rehashly/projen-jsii.git',
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],             /* Build dependencies for this module. */
-});
-project.synth();
+  prettier: true,
+  prettierOptions: {
+    settings: {
+      singleQuote: true,
+      semi: false,
+    },
+  },
+  deps: ['projen'],
+  peerDeps: ['projen'],
+  npmAccess: NpmAccess.PUBLIC,
+})
+project.synth()
