@@ -1,9 +1,11 @@
-const { cdk, javascript } = require('projen')
+import { cdk, javascript } from 'projen'
 
 const project = new cdk.JsiiProject({
   author: 'Haitham Gad',
   authorAddress: 'haitham@rehashly.com',
   authorOrganization: true,
+  copyrightOwner: 'Rehashly, LLC',
+  copyrightPeriod: new Date().getFullYear().toString(),
   defaultReleaseBranch: 'main',
   description: "Rehashly's opinionated projen JSII project type.",
   keywords: ['projen', 'jsii'],

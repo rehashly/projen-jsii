@@ -42,6 +42,8 @@ export class RehashlyJsiiProject extends cdk.JsiiProject {
       merge(
         {
           authorOrganization: true,
+          copyrightOwner: 'Rehashly, LLC',
+          copyrightPeriod: new Date().getFullYear().toString(),
           defaultReleaseBranch: 'main',
           npmAccess: javascript.NpmAccess.PUBLIC,
           packageManager: javascript.NodePackageManager.NPM,
