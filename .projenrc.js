@@ -7,7 +7,7 @@ const project = new cdk.JsiiProject({
   defaultReleaseBranch: 'main',
   description: "Rehashly's opinionated projen JSII project type.",
   keywords: ['projen', 'jsii'],
-  name: 'projen-jsii',
+  name: 'rehashly-projen-jsii',
   npmAccess: javascript.NpmAccess.PUBLIC,
   packageManager: javascript.NodePackageManager.NPM,
   packageName: '@rehashly/projen-jsii',
@@ -19,6 +19,7 @@ const project = new cdk.JsiiProject({
       semi: false,
     },
   },
+  projenrcTs: true,
   deps: ['projen'],
   peerDeps: ['projen'],
 })

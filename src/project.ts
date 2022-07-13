@@ -42,7 +42,7 @@ export class RehashlyJsiiProject extends cdk.JsiiProject {
       merge(
         {
           authorOrganization: true,
-          keywords: ['projen', 'jsii'],
+          defaultReleaseBranch: 'main',
           npmAccess: javascript.NpmAccess.PUBLIC,
           packageManager: javascript.NodePackageManager.NPM,
           prettier: true,
@@ -52,6 +52,7 @@ export class RehashlyJsiiProject extends cdk.JsiiProject {
               semi: false,
             },
           },
+          projenrcTs: true,
           deps: ['projen'],
           peerDeps: ['projen'],
         },
