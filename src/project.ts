@@ -45,6 +45,7 @@ export class RehashlyJsiiProject extends cdk.JsiiProject {
           copyrightOwner: 'Rehashly, LLC',
           copyrightPeriod: new Date().getFullYear().toString(),
           defaultReleaseBranch: 'main',
+          license: 'MIT',
           npmAccess: javascript.NpmAccess.PUBLIC,
           packageManager: javascript.NodePackageManager.NPM,
           prettier: true,
